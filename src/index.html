@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chifoumi</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- Conteneur du jeu -->
+    <div class="game-container">
+
+
+        <!-- Score -->       
+        <div class="score-zone">
+            <div class="score-box">Joueur : <span id="user-score">0</span></div>
+            <div class="score-box">Ordinateur : <span id="computer-score">0</span></div>
+        </div>
+
+        <!-- Boutons de choix -->
+        <div class="choice-zone">
+            <button class="choice-button" data-choice="1" aria-label="Choisir Pierre">
+                <img src="images/Pierre.jpg" width="100" alt="Pierre">
+            </button>
+            <button class="choice-button" data-choice="2" aria-label="Choisir Papier">
+                <img src="images/Papier.jpg" width="100" alt="Papier">
+            </button>
+            <button class="choice-button" data-choice="3" aria-label="Choisir Ciseaux">
+                <img src="images/Ciseaux.jpg" width="100" alt="Ciseaux">
+            </button>
+        </div>
+
+        <!-- Zones des résultats -->
+        <div class="result-zone hidden">
+            <div class="zone-yellow hidden" id="user-choice">
+                <h3>Joueur</h3>
+                <img id="user-choice-img" src="" width="60" alt="Choix du joueur">
+            </div>
+            <div class="zone-green hidden" id="computer-choice">
+                <h3>Ordinateur</h3>
+                <img id="computer-choice-img" src="" width="60" alt="Choix de l'ordinateur">
+            </div>
+        </div>
+        
+        <!-- Historique des résultats -->
+        <div class="result-display">
+            <h3>Historique</h3>
+            <div id="result-container"></div>
+        </div>
+
+        <!-- Bouton de réinitialisation -->
+        <div class="reset-zone">
+            <button id="reset" class="reset-button" aria-label="Réinitialiser la partie">Réinitialiser</button>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
